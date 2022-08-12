@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+.attribution {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+a {
+  color: var(--clr1);
+}
+
+:root {
+  --clr1: hsl(215, 51%, 70%);
+  --clr2: hsl(178, 100%, 50%);
+  --clr3: hsl(217, 54%, 11%);
+  --clr4: hsl(216, 50%, 16%);
+  --clr5: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  background-color: var(--clr3);
+  color: var(--clr5);
+}
+
+.card {
+  width: 350px;
+  padding: 25px;
+  background-color: var(--clr4);
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.img-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.img-container:hover::before {
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+}
+
+.eye-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsla(178, 100%, 50%, 0.5);
+  opacity: 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.eye-wrapper:hover {
+  opacity: 1;
+}
+
+.price-time {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  font-size: 22px;
+  cursor: pointer;
+}
+
+h1:hover {
+  color: var(--clr2);
+}
+
+.price,
+.time {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+p {
+  color: var(--clr1);
+  font-weight: 300;
+}
+
+.price p {
+  color: var(--clr2);
+  font-weight: 400;
+}
+
+.time p {
+  color: var(--clr1);
+  font-weight: 300;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: hsla(215, 52%, 70%, 0.2);
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: var(--clr1);
+  font-weight: 300;
+  padding-bottom: 10px;
+}
+
+.author img {
+  width: 35px;
+  border-radius: 50%;
+  border: 1px solid var(--clr5);
+}
+
+.author a {
+  text-decoration: none;
+  color: var(--clr5);
+}
+
+.author a:hover {
+  color: var(--clr2);
+}
+
+@media screen and (max-width: 375px) {
+  main {
+    padding: 20px;
+  }
+  p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 315px) {
+  p {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+}
